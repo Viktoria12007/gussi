@@ -5,21 +5,38 @@ import '../scss/main.scss';
 import '../index.html';
 // import $ from 'jquery';
 import Swiper from 'swiper/bundle';
-import 'swiper/css/bundle';
+
 
 
 window.addEventListener('DOMContentLoaded', function(){
-  var mySwiper = new Swiper('.swiper-container', {
+  let productSwiper = new Swiper('.swiper-container', {
     direction: 'horizontal',
     loop: true,
+    allowTouchMove: false,
+    effect: 'fade',
+    fadeEffect: {
+      crossFade: true
+    },
     pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true,
+      el: '.product-pagination',
+      type: 'fraction',
+      clickable: false,
+      renderFraction:(currentClass, totalClass) => {
+        return '<div class="' + currentClass +'"></div>' + 
+        '<svg class="product-pagination__icon" width="16" height="1" viewBox="0 0 16 1" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="15.5" y1="0.5" x2="0.5" y2="0.500001" stroke="#ffffff" stroke-linecap="round"/></svg>'
+         +
+        '<div class="' + totalClass +'"></div>'
+      },
+      formatFractionCurrent:(number) => {
+         return '0' + number
+      },
+      formatFractionTotal:(number) => {
+        return '0' + number
+     },
     },
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.product-button-next',
+      prevEl: '.product-button-prev',
     },
   })
   // $( function() {
