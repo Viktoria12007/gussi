@@ -1,0 +1,64 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  min-width: 291px;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 24px;
+  background-color: $white-color;
+  color: $violet-color;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+// a:visited {
+//   font-weight: 400;
+// }
+img {
+  width: 100%;
+  display: block;
+}
+ul {
+  list-style: none;
+}
+.text {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 32px;
+  color: $bluesh-gray-color; 
+}
+.title {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: $bluesh-gray-color;
+}
+.button {
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 32px;
+  font-size: 24px;
+  text-align: center;
+  border: none;
+  border-radius: 0;
+  // outline: none;
+  cursor: pointer;
+  background-color: $violet-color;
+  color: $white-color;
+}
+.input {
+font-family: inherit;
+border: none;
+border-radius: 1px;
+background-color: rgba(225, 230, 237, 0.2);
+}
+.container {
+  max-width: 1360px;
+  margin: 0 auto;
+}

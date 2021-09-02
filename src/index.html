@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' gap:; script-src * data: https://ssl.gstatic.com 'unsafe-inline' 'unsafe-eval'; object-src *; style-src 'self' data: 'unsafe-inline'; img-src 'self' data:; media-src 'self' data:; font-src 'self' https://fonts.gstatic.com data:; connect-src *"> -->
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="preload" href="./fonts/Rajdhani-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/Rajdhani-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/Rajdhani-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/Rajdhani-Medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/Rajdhani-Light.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/Rajdhani-Regular.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="./fonts/Rajdhani-Bold.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="./fonts/Rajdhani-SemiBold.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="./fonts/Rajdhani-Medium.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="./fonts/Rajdhani-Light.woff" as="font" type="font/woff" crossorigin>
+  <title>Gussi dev.test</title>
+</head>
+<body>
+  <main>
+    <section class="products-box">
+      <div class="container">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="product-image">
+              <a class="product-image__logo-link" href="#"><img class="logo" src="./img/Logo.png" alt="Логотип"></a>
+              <img class="product-image__picture product-image__picture_1" src="./img/product1.jpg" alt="Light coat">
+              <h1 class="product-image__title">Light coat <div class="product-image__title_small">More cotton, more freedom</div></h1>
+            </div>
+              <div class="product-info">
+                <h2 class="product-info__collection-title title">NEW COLLECTION</h2>
+                <h3 class="product-info__product-title">Gussi light coat </h3>
+                <p class="product-info__text text">It takes you from the party to the after party 
+                  with its fashion-forward styles. A playfull blend
+                  of retro and modern outdoor design.</p>
+                <form class="product-form">
+                  <h2 class="product-info__details-title title">PRODUCT DETAILS</h2>
+                  <p class="product-info__details-text">Look out for its standout party dresses, feminine details, statement jackets and cool denim 
+                    including skinny-cut jeans and cute denim shorts, which sit alongside its directional footwear 
+                    and swimwear ranges.</p>
+                  <div class="product-info__composition">63% Viscose, 37% Polyamide.</div>
+                  <button class="product-form__order-button button">Order now</button>
+                </form>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img class="product-image product-image_2" src="./img/product2.jpg" alt="Sandy longsleeve">
+            </div>
+            <div class="swiper-slide">
+              <img class="product-image product-image_3" src="./img/product3.jpg" alt="Lime jacket">
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <!-- <script src="./assets/just-validate/dist/js/just-validate.min.js"></script> -->
+  <!-- <script src="../node_modules/inputmask/dist/inputmask.min.js"></script> -->
+</body>
+</html>
