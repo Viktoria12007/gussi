@@ -25,7 +25,7 @@
         <div class="swiper-wrapper">
             <div class="swiper-slide">
               <div class="product-image">
-              <a class="product-image__logo-link" href="#"><img class="logo" src="./img/Logo.png" alt="Логотип"></a>
+              <a class="product-image__logo-link" href="#"><img class="logo" src="./img/Logo.png" alt="Logo"></a>
               <img class="product-image__picture product-image__picture_1" src="./img/product1.jpg" alt="Light coat">
               <h1 class="product-image__title">Light coat <div class="product-image__title_small">More cotton, more freedom</div></h1>
             </div>
@@ -35,7 +35,7 @@
                 <p class="product-info__text text">It takes you from the party to the after party 
                   with its fashion-forward styles. A playfull blend
                   of retro and modern outdoor design.</p>
-                <form class="product-form" autocomplete="on" method="POST">
+                <form class="product-form" action="https://jsonplaceholder.typicode.com/posts" autocomplete="on" method="POST">
                   <fildset class="product-form__group">
                     <legend class="product-form__group-title product-form__group-title_first-row">COLOUR</legend>
                     <label class="custom-radio">
@@ -55,35 +55,44 @@
                     <legend class="product-form__group-title product-form__group-title_first-row">SIZE</legend>
                     <label class="custom-radio custom-radio_size">
                       <input class="visually-hidden" type="radio" name="size" value="XS">
-                      <span class="product-form__choose product-form__choose_size">XS</span>
+                      <span class="product-form__choose product-form__choose_xs"></span>
                     </label>
                       <label class="custom-radio custom-radio_size">
                       <input class="visually-hidden" type="radio" name="size" value="S" checked>
-                      <span class="product-form__choose product-form__choose_size">S</span>
+                      <span class="product-form__choose product-form__choose_s"></span>
                     </label>
                       <label class="custom-radio custom-radio_size">
                       <input class="visually-hidden" type="radio" name="size" value="M">
-                      <span class="product-form__choose product-form__choose_size">M</span>
+                      <span class="product-form__choose product-form__choose_m"></span>
                     </label>
                     <label class="custom-radio custom-radio_size">
                       <input class="visually-hidden" type="radio" name="size" value="L">
-                      <span class="product-form__choose product-form__choose_size">L</span>
+                      <span class="product-form__choose product-form__choose_l"></span>
                     </label>
                   </fildset>
                   <fildset class="product-form__group">
-                    <legend class="product-form__group-title product-form__group-title_first-row">QUANTITY</legend>
+                    <button class="product-form__guide-button" type="button">Size guide</button>
+                  </fildset>
+                  <fildset class="product-form__group">
+                    <legend class="product-form__group-title product-form__group-title_quantity">QUANTITY</legend>
                     <div class="product-form__quantity-control">
-                    <button class="product-form__quantity-button" type="button">
+                    <button class="product-form__quantity-button product-form__quantity-button_decrease" type="button">
                       <svg width="10" height="2" viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M9.56923 1.72998H0.430769C0.14359 1.72998 0 1.60035 0 1.34109V0.618869C0 0.35961 0.14359 0.22998 0.430769 0.22998H9.56923C9.85641 0.22998 10 0.35961 10 0.618869V1.34109C10 1.60035 9.85641 1.72998 9.56923 1.72998Z" fill="#192B3F"/>
                       </svg>
                     </button>
                     <div class="product-form__quantity-number">1</div>
-                    <button class="product-form__quantity-button" type="button">
+                    <button class="product-form__quantity-button product-form__quantity-button_increase" type="button">
                       <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M5.82278 4.21717H9.62025C9.87342 4.21717 10 4.34343 10 4.59596V5.40404C10 5.63973 9.87342 5.75758 9.62025 5.75758H5.82278V9.59596C5.82278 9.86532 5.6962 10 5.44304 10H4.58228C4.32911 10 4.20253 9.86532 4.20253 9.59596V5.75758H0.379747C0.126582 5.75758 0 5.63973 0 5.40404V4.59596C0 4.34343 0.126582 4.21717 0.379747 4.21717H4.20253V0.404041C4.20253 0.13468 4.32911 0 4.58228 0H5.44304C5.6962 0 5.82278 0.13468 5.82278 0.404041V4.21717Z" fill="#192B3F"/>
                         </svg>                        
                     </button>
+                    </div>
+                  </fildset>
+                  <fildset class="product-form__group">
+                    <legend class="product-form__group-title product-form__group-title_cost">COST</legend>
+                    <div class="product-form__cost">
+                      $120<span class="product-form__cost_balance">.00</span>
                     </div>
                   </fildset>
                   <fildset class="product-form__group">
@@ -93,16 +102,16 @@
                     and swimwear ranges.</p>
                   <div class="product-info__composition">63% Viscose, 37% Polyamide.</div>
                   </fildset>
-                  <button class="product-form__order-button button" type="button">Order now</button>
+                  <button class="product-form__order-button button" type="submit">Order now</button>
                 </form>
               </div>
             </div>
-            <div class="swiper-slide">
+            <!-- <div class="swiper-slide">
               <img class="product-image product-image_2" src="./img/product2.jpg" alt="Sandy longsleeve">
             </div>
             <div class="swiper-slide">
               <img class="product-image product-image_3" src="./img/product3.jpg" alt="Lime jacket">
-            </div>
+            </div> -->
         </div>
         <div class="product-slider-control">
           <div class="product-button-prev">
@@ -122,6 +131,51 @@
         <div class="swiper-button-next"></div> -->
         </div>
       </div>
+    </section>
+    <section class="service-box">
+      <div class="container service-column">
+        <div class="service-column_first"></div>
+      <ul class="service-list" id="accordion">
+        <li class="service-list__item" tabindex="0">
+          <h3 class="service-list__header">
+            <div class="service-list__header-wrapper">
+              <div class="service-list__header-title">Delivery</div>
+              <!-- <span class="service-list__icon"></span> -->
+              <svg class="plus" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.82278 4.21717H9.62025C9.87342 4.21717 10 4.34343 10 4.59596V5.40404C10 5.63973 9.87342 5.75758 9.62025 5.75758H5.82278V9.59596C5.82278 9.86532 5.6962 10 5.44304 10H4.58228C4.32911 10 4.20253 9.86532 4.20253 9.59596V5.75758H0.379747C0.126582 5.75758 0 5.63973 0 5.40404V4.59596C0 4.34343 0.126582 4.21717 0.379747 4.21717H4.20253V0.404041C4.20253 0.13468 4.32911 0 4.58228 0H5.44304C5.6962 0 5.82278 0.13468 5.82278 0.404041V4.21717Z" fill="#192B3F"/>
+                </svg> 
+                <svg class="minus" width="10" height="2" viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.56923 1.72998H0.430769C0.14359 1.72998 0 1.60035 0 1.34109V0.618869C0 0.35961 0.14359 0.22998 0.430769 0.22998H9.56923C9.85641 0.22998 10 0.35961 10 0.618869V1.34109C10 1.60035 9.85641 1.72998 9.56923 1.72998Z" fill="#192B3F"/>
+                  </svg>
+            </div>
+          </h3>
+            <div class="service-list__content">
+              <p class="service-list__text">Delivered on or before Monday, 25 February 2019
+                Note: Subject to placing your order before specific cut-off times. Details available in checkout.</p> 
+                <p class="service-list__text">For free delivery – spend over <span class="service-list__text_price">£18.08</span></p>
+              </div>
+        </li>
+        <li class="service-list__item" tabindex="0">
+          <h3 class="service-list__header">
+            <div class="service-list__header-wrapper">
+              <div class="service-list__header-title">Return</div>
+              <!-- <span class="service-list__icon"></span> -->
+              <svg class="plus" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.82278 4.21717H9.62025C9.87342 4.21717 10 4.34343 10 4.59596V5.40404C10 5.63973 9.87342 5.75758 9.62025 5.75758H5.82278V9.59596C5.82278 9.86532 5.6962 10 5.44304 10H4.58228C4.32911 10 4.20253 9.86532 4.20253 9.59596V5.75758H0.379747C0.126582 5.75758 0 5.63973 0 5.40404V4.59596C0 4.34343 0.126582 4.21717 0.379747 4.21717H4.20253V0.404041C4.20253 0.13468 4.32911 0 4.58228 0H5.44304C5.6962 0 5.82278 0.13468 5.82278 0.404041V4.21717Z" fill="#192B3F"/>
+                </svg> 
+                <svg class="minus" width="10" height="2" viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.56923 1.72998H0.430769C0.14359 1.72998 0 1.60035 0 1.34109V0.618869C0 0.35961 0.14359 0.22998 0.430769 0.22998H9.56923C9.85641 0.22998 10 0.35961 10 0.618869V1.34109C10 1.60035 9.85641 1.72998 9.56923 1.72998Z" fill="#192B3F"/>
+                  </svg>
+            </div>
+          </h3>
+            <div class="service-list__content">
+              <p class="service-list__text">Return through your local Boxberry store available in over 2,300 locations.
+                You can create your return on the carrier website by clicking the create return link.
+                Open 7 days a week, early until late.</p> 
+              </div>
+        </li>
+    </ul>
+    </div>
     </section>
   </main>
   

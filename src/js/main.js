@@ -1,18 +1,25 @@
 import '../../node_modules/focus-visible/dist/focus-visible';
 import '../../node_modules/just-validate/dist/js/just-validate';
 // import Inputmask from "inputmask";
+import Swiper from 'swiper/bundle';
+// import '../../node_modules/jquery-ui-1.12.1.custom/external/jquery/jquery'
+// import '../../node_modules/jquery-ui/jquery-ui.min.js'
+let $ = require("jquery");
+require("jquery-ui/ui/widgets/accordion");
 import '../scss/main.scss';
 import '../index.html';
 // import $ from 'jquery';
-import Swiper from 'swiper/bundle';
 
 
 
 window.addEventListener('DOMContentLoaded', function(){
+  const plus = document.querySelector('.plus');
+  const minus = document.querySelector('.minus');
   let productSwiper = new Swiper('.swiper-container', {
     direction: 'horizontal',
     loop: true,
     allowTouchMove: false,
+    autoHeight: true,
     effect: 'fade',
     fadeEffect: {
       crossFade: true
@@ -39,20 +46,49 @@ window.addEventListener('DOMContentLoaded', function(){
       prevEl: '.product-button-prev',
     },
   })
-  // $( function() {
-  //   $( "#accordion" ).accordion({
-  //     collapsible: true,
-  //     heightStyle: "content",
-  //     header: "h3",
-  //   });
-  // });
+  $( function() {
+    $( "#accordion" ).accordion({
+      collapsible: true,
+      heightStyle: "content",
+      header: "h3",
+      active: false,
+      beforeActivate: () => {
+        // $(plus).show();
+        // $(minus).hide();
+        plus.style.display = 'block';
+        minus.style.display = 'none';
+    },
+      activate: () => {
+        console.log(true);
+        // $(plus).hide();
+        // $(minus).show();
+        plus.style.display = 'none';
+        minus.style.display = 'block';
+      }
+    });
+  });
     // document.querySelector('#burger').addEventListener('click', function() {
     // document.querySelector('#menu').classList.toggle('is-active')
     // })
     // document.querySelector('#close').addEventListener('click', function() {
     // document.querySelector('#menu').classList.remove('is-active')
     // })
+
+    // if ($(".ui-accordion-content").hasClass('ui-accordion-content-active')) {
+    //   console.log(true)
+    // }
+    function checkActivateAccordion () {
+    let accordionContent = document.querySelectorAll(".ui-accordion-content");
+    console.log(accordionContent);
+    $('#accor')
+    accordionContent.forEach(el => {
+      if (el.classList.contains('ui-accordion-content-active')) {
+        console.log(true)
+      }
+    })
+  }
 })
+
 
 
 
