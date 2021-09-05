@@ -44,21 +44,39 @@ ul {
   font-weight: 500;
   line-height: 32px;
   font-size: 24px;
+  color: $white-color;
   text-align: center;
   border: none;
   border-radius: 0;
   // outline: none;
   cursor: pointer;
   background-color: $violet-color;
-  color: $white-color;
+  transition: background-color .4s ease-in-out;
+  &:hover {
+    background-color: #2e4055;
+  }
+  &:active {
+    background-color: #3b536d;
+  }
 }
 .input {
-font-family: inherit;
-border: none;
-border-radius: 1px;
-background-color: rgba(225, 230, 237, 0.2);
+  font-family: inherit;
+  border: none;
+  border-radius: 1px;
+  background-color: rgba(225, 230, 237, 0.2);
 }
 .container {
   max-width: 1360px;
   margin: 0 auto;
+}
+.content-column {
+  display: flex;
+}
+.content-column_first {
+  width: 600px; 
+  flex: 0 0 auto;
+}
+.content-column_second {
+  flex: 1 1 auto;
+  padding: 0px 52px 0px 92px;
 }

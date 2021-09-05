@@ -1,0 +1,139 @@
+.notified-box {
+    margin-bottom: 29px;
+    &__title {
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 40px;
+    }
+    &__text {
+        margin-bottom: 24px;
+    }
+}
+.notified-form {
+    display: flex;
+    flex-direction: column;
+    &__input {
+        max-width: 456px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 40px;
+        padding-left: 16px;
+        padding-right: 16px;
+        &[name="name"] {
+            margin-bottom: 16px;
+        }
+        &[name="email"] {
+            margin-bottom: 12px;
+        }
+        &::placeholder {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 40px;
+            color: $bluesh-gray-color;
+        }
+    }
+    &__group {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+        &-title {
+            margin-right: 24px;
+        }
+        &-wrapper {
+            display: flex;
+            align-items: center;
+            & .custom-radio {
+                &:first-child {
+                    margin-right: 24px;
+                }
+            }
+        }
+    }
+    &__button {
+        padding: 12px;
+    }
+}
+
+.custom-radio {
+& .notified-form__choose {
+    display: inline-block;
+    text-align: center;
+    padding-left: 28px;
+}
+& .notified-form__choose::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    border: 1px solid $light-gray-color;
+    border-radius: 100%;
+}
+& .notified-form__choose::after {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+    background-color: $violet-color;
+    opacity: 0;
+    transition: opacity .4s ease-in-out;
+}
+& input:checked+.notified-form__choose::after {
+    opacity: 1;
+}
+}
+.custom-checkbox {
+    cursor: pointer;
+    margin-bottom: 16px;
+& .notified-form__attention {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-left: 28px;
+}
+& .notified-form__attention::before {
+    content: '';
+    display: inline-block;
+    min-width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 5px;
+    left: 0;
+    border: 1px solid $light-gray-color;
+    background-color: transparent;
+    transition: background-color .4s ease-in-out, border-color .4s ease-in-out;
+}
+& .notified-form__attention::after {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 9.4px;
+    min-width: 5px;
+    height: 8px;
+    border: solid $light-gray-color;
+    border-width: 0 1px 1px 0;
+    transform: rotate(45deg);
+    opacity: 0;
+    transition: opacity .4s ease-in-out, border-color .4s ease-in-out;
+}
+& input[type="checkbox"]:checked + span::before {
+    background-color: $violet-color;
+}
+& input[type="checkbox"]:checked + span::after {
+    opacity: 1;
+}
+&:hover input[type="checkbox"] + span::before {
+   border-color: $violet-color;
+}
+&:hover input[type="checkbox"] + span::after {
+    opacity: 1;
+    border-color: $light-gray-color;
+ }
+}

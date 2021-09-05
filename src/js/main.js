@@ -52,19 +52,19 @@ window.addEventListener('DOMContentLoaded', function(){
       heightStyle: "content",
       header: "h3",
       active: false,
-      beforeActivate: () => {
-        // $(plus).show();
-        // $(minus).hide();
-        plus.style.display = 'block';
-        minus.style.display = 'none';
-    },
-      activate: () => {
-        console.log(true);
-        // $(plus).hide();
-        // $(minus).show();
-        plus.style.display = 'none';
-        minus.style.display = 'block';
-      }
+    //   beforeActivate: () => {
+    //     // $(plus).show();
+    //     // $(minus).hide();
+    //     plus.style.display = 'block';
+    //     minus.style.display = 'none';
+    // },
+    //   activate: () => {
+    //     console.log(true);
+    //     // $(plus).hide();
+    //     // $(minus).show();
+    //     plus.style.display = 'none';
+    //     minus.style.display = 'block';
+    //   }
     });
   });
     // document.querySelector('#burger').addEventListener('click', function() {
@@ -77,16 +77,16 @@ window.addEventListener('DOMContentLoaded', function(){
     // if ($(".ui-accordion-content").hasClass('ui-accordion-content-active')) {
     //   console.log(true)
     // }
-    function checkActivateAccordion () {
-    let accordionContent = document.querySelectorAll(".ui-accordion-content");
-    console.log(accordionContent);
-    $('#accor')
-    accordionContent.forEach(el => {
-      if (el.classList.contains('ui-accordion-content-active')) {
-        console.log(true)
-      }
-    })
-  }
+  //   function checkActivateAccordion () {
+  //   let accordionContent = document.querySelectorAll(".ui-accordion-content");
+  //   console.log(accordionContent);
+  //   $('#accor')
+  //   accordionContent.forEach(el => {
+  //     if (el.classList.contains('ui-accordion-content-active')) {
+  //       console.log(true)
+  //     }
+  //   })
+  // }
 })
 
 

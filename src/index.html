@@ -106,12 +106,172 @@
                 </form>
               </div>
             </div>
-            <!-- <div class="swiper-slide">
-              <img class="product-image product-image_2" src="./img/product2.jpg" alt="Sandy longsleeve">
+            <div class="swiper-slide">
+              <div class="product-image">
+              <a class="product-image__logo-link" href="#"><img class="logo" src="./img/Logo.png" alt="Logo"></a>
+              <img class="product-image__picture product-image__picture_1" src="./img/product2.jpg" alt="Light coat">
+              <h1 class="product-image__title">Sandy longsleeve <div class="product-image__title_small">More cotton, more freedom</div></h1>
+            </div>
+              <div class="product-info">
+                <h2 class="product-info__collection-title title">NEW COLLECTION</h2>
+                <h3 class="product-info__product-title">Gussi sandy longsleeve</h3>
+                <p class="product-info__text text">It takes you from the party to the after party 
+                  with its fashion-forward styles. A playfull blend
+                  of retro and modern outdoor design.</p>
+                <form class="product-form" action="https://jsonplaceholder.typicode.com/posts" autocomplete="on" method="POST">
+                  <fildset class="product-form__group">
+                    <legend class="product-form__group-title product-form__group-title_first-row">COLOUR</legend>
+                    <label class="custom-radio">
+                      <input class="visually-hidden" type="radio" name="color" value="violet" checked>
+                      <span class="product-form__choose product-form__choose_violet"></span>
+                    </label>
+                      <label class="custom-radio">
+                      <input class="visually-hidden" type="radio" name="color" value="bluesh-gray">
+                      <span class="product-form__choose product-form__choose_bluesh-gray"></span>
+                    </label>
+                      <label class="custom-radio">
+                      <input class="visually-hidden" type="radio" name="color" value="middle-blue">
+                      <span class="product-form__choose product-form__choose_middle-blue"></span>
+                    </label>
+                  </fildset>
+                  <fildset class="product-form__group">
+                    <legend class="product-form__group-title product-form__group-title_first-row">SIZE</legend>
+                    <label class="custom-radio custom-radio_size">
+                      <input class="visually-hidden" type="radio" name="size" value="XS">
+                      <span class="product-form__choose product-form__choose_xs"></span>
+                    </label>
+                      <label class="custom-radio custom-radio_size">
+                      <input class="visually-hidden" type="radio" name="size" value="S" checked>
+                      <span class="product-form__choose product-form__choose_s"></span>
+                    </label>
+                      <label class="custom-radio custom-radio_size">
+                      <input class="visually-hidden" type="radio" name="size" value="M">
+                      <span class="product-form__choose product-form__choose_m"></span>
+                    </label>
+                    <label class="custom-radio custom-radio_size">
+                      <input class="visually-hidden" type="radio" name="size" value="L">
+                      <span class="product-form__choose product-form__choose_l"></span>
+                    </label>
+                  </fildset>
+                  <fildset class="product-form__group">
+                    <button class="product-form__guide-button" type="button">Size guide</button>
+                  </fildset>
+                  <fildset class="product-form__group">
+                    <legend class="product-form__group-title product-form__group-title_quantity">QUANTITY</legend>
+                    <div class="product-form__quantity-control">
+                    <button class="product-form__quantity-button product-form__quantity-button_decrease" type="button">
+                      <svg width="10" height="2" viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.56923 1.72998H0.430769C0.14359 1.72998 0 1.60035 0 1.34109V0.618869C0 0.35961 0.14359 0.22998 0.430769 0.22998H9.56923C9.85641 0.22998 10 0.35961 10 0.618869V1.34109C10 1.60035 9.85641 1.72998 9.56923 1.72998Z" fill="#192B3F"/>
+                      </svg>
+                    </button>
+                    <div class="product-form__quantity-number">1</div>
+                    <button class="product-form__quantity-button product-form__quantity-button_increase" type="button">
+                      <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.82278 4.21717H9.62025C9.87342 4.21717 10 4.34343 10 4.59596V5.40404C10 5.63973 9.87342 5.75758 9.62025 5.75758H5.82278V9.59596C5.82278 9.86532 5.6962 10 5.44304 10H4.58228C4.32911 10 4.20253 9.86532 4.20253 9.59596V5.75758H0.379747C0.126582 5.75758 0 5.63973 0 5.40404V4.59596C0 4.34343 0.126582 4.21717 0.379747 4.21717H4.20253V0.404041C4.20253 0.13468 4.32911 0 4.58228 0H5.44304C5.6962 0 5.82278 0.13468 5.82278 0.404041V4.21717Z" fill="#192B3F"/>
+                        </svg>                        
+                    </button>
+                    </div>
+                  </fildset>
+                  <fildset class="product-form__group">
+                    <legend class="product-form__group-title product-form__group-title_cost">COST</legend>
+                    <div class="product-form__cost">
+                      $120<span class="product-form__cost_balance">.00</span>
+                    </div>
+                  </fildset>
+                  <fildset class="product-form__group">
+                  <h2 class="product-info__details-title title">PRODUCT DETAILS</h2>
+                  <p class="product-info__details-text">Look out for its standout party dresses, feminine details, statement jackets and cool denim 
+                    including skinny-cut jeans and cute denim shorts, which sit alongside its directional footwear 
+                    and swimwear ranges.</p>
+                  <div class="product-info__composition">63% Viscose, 37% Polyamide.</div>
+                  </fildset>
+                  <button class="product-form__order-button button" type="submit">Order now</button>
+                </form>
+              </div>
             </div>
             <div class="swiper-slide">
-              <img class="product-image product-image_3" src="./img/product3.jpg" alt="Lime jacket">
-            </div> -->
+              <div class="product-image">
+              <a class="product-image__logo-link" href="#"><img class="logo" src="./img/Logo.png" alt="Logo"></a>
+              <img class="product-image__picture product-image__picture_1" src="./img/product3.jpg" alt="Light coat">
+              <h1 class="product-image__title">Lime jacket <div class="product-image__title_small">More cotton, more freedom</div></h1>
+            </div>
+              <div class="product-info">
+                <h2 class="product-info__collection-title title">NEW COLLECTION</h2>
+                <h3 class="product-info__product-title">Gussi lime jacket</h3>
+                <p class="product-info__text text">It takes you from the party to the after party 
+                  with its fashion-forward styles. A playfull blend
+                  of retro and modern outdoor design.</p>
+                <form class="product-form" action="https://jsonplaceholder.typicode.com/posts" autocomplete="on" method="POST">
+                  <fildset class="product-form__group">
+                    <legend class="product-form__group-title product-form__group-title_first-row">COLOUR</legend>
+                    <label class="custom-radio">
+                      <input class="visually-hidden" type="radio" name="color" value="violet" checked>
+                      <span class="product-form__choose product-form__choose_violet"></span>
+                    </label>
+                      <label class="custom-radio">
+                      <input class="visually-hidden" type="radio" name="color" value="bluesh-gray">
+                      <span class="product-form__choose product-form__choose_bluesh-gray"></span>
+                    </label>
+                      <label class="custom-radio">
+                      <input class="visually-hidden" type="radio" name="color" value="middle-blue">
+                      <span class="product-form__choose product-form__choose_middle-blue"></span>
+                    </label>
+                  </fildset>
+                  <fildset class="product-form__group">
+                    <legend class="product-form__group-title product-form__group-title_first-row">SIZE</legend>
+                    <label class="custom-radio custom-radio_size">
+                      <input class="visually-hidden" type="radio" name="size" value="XS">
+                      <span class="product-form__choose product-form__choose_xs"></span>
+                    </label>
+                      <label class="custom-radio custom-radio_size">
+                      <input class="visually-hidden" type="radio" name="size" value="S" checked>
+                      <span class="product-form__choose product-form__choose_s"></span>
+                    </label>
+                      <label class="custom-radio custom-radio_size">
+                      <input class="visually-hidden" type="radio" name="size" value="M">
+                      <span class="product-form__choose product-form__choose_m"></span>
+                    </label>
+                    <label class="custom-radio custom-radio_size">
+                      <input class="visually-hidden" type="radio" name="size" value="L">
+                      <span class="product-form__choose product-form__choose_l"></span>
+                    </label>
+                  </fildset>
+                  <fildset class="product-form__group">
+                    <button class="product-form__guide-button" type="button">Size guide</button>
+                  </fildset>
+                  <fildset class="product-form__group">
+                    <legend class="product-form__group-title product-form__group-title_quantity">QUANTITY</legend>
+                    <div class="product-form__quantity-control">
+                    <button class="product-form__quantity-button product-form__quantity-button_decrease" type="button">
+                      <svg width="10" height="2" viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.56923 1.72998H0.430769C0.14359 1.72998 0 1.60035 0 1.34109V0.618869C0 0.35961 0.14359 0.22998 0.430769 0.22998H9.56923C9.85641 0.22998 10 0.35961 10 0.618869V1.34109C10 1.60035 9.85641 1.72998 9.56923 1.72998Z" fill="#192B3F"/>
+                      </svg>
+                    </button>
+                    <div class="product-form__quantity-number">1</div>
+                    <button class="product-form__quantity-button product-form__quantity-button_increase" type="button">
+                      <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.82278 4.21717H9.62025C9.87342 4.21717 10 4.34343 10 4.59596V5.40404C10 5.63973 9.87342 5.75758 9.62025 5.75758H5.82278V9.59596C5.82278 9.86532 5.6962 10 5.44304 10H4.58228C4.32911 10 4.20253 9.86532 4.20253 9.59596V5.75758H0.379747C0.126582 5.75758 0 5.63973 0 5.40404V4.59596C0 4.34343 0.126582 4.21717 0.379747 4.21717H4.20253V0.404041C4.20253 0.13468 4.32911 0 4.58228 0H5.44304C5.6962 0 5.82278 0.13468 5.82278 0.404041V4.21717Z" fill="#192B3F"/>
+                        </svg>                        
+                    </button>
+                    </div>
+                  </fildset>
+                  <fildset class="product-form__group">
+                    <legend class="product-form__group-title product-form__group-title_cost">COST</legend>
+                    <div class="product-form__cost">
+                      $120<span class="product-form__cost_balance">.00</span>
+                    </div>
+                  </fildset>
+                  <fildset class="product-form__group">
+                  <h2 class="product-info__details-title title">PRODUCT DETAILS</h2>
+                  <p class="product-info__details-text">Look out for its standout party dresses, feminine details, statement jackets and cool denim 
+                    including skinny-cut jeans and cute denim shorts, which sit alongside its directional footwear 
+                    and swimwear ranges.</p>
+                  <div class="product-info__composition">63% Viscose, 37% Polyamide.</div>
+                  </fildset>
+                  <button class="product-form__order-button button" type="submit">Order now</button>
+                </form>
+              </div>
+            </div>
         </div>
         <div class="product-slider-control">
           <div class="product-button-prev">
@@ -133,8 +293,9 @@
       </div>
     </section>
     <section class="service-box">
-      <div class="container service-column">
-        <div class="service-column_first"></div>
+      <div class="container content-column">
+        <div class="content-column_first"></div>
+        <div class="content-column_second">
       <ul class="service-list" id="accordion">
         <li class="service-list__item" tabindex="0">
           <h3 class="service-list__header">
@@ -176,6 +337,70 @@
         </li>
     </ul>
     </div>
+    </div>
+    </section>
+    <section class="collections-box">
+      <div class="container content-column">
+        <div class="content-column_first"></div>
+        <div class="content-column_second">
+        <h2 class="collections-box__title title">
+          SIMILAR COLLECTIONS
+        </h2>
+        <ul class="collections-list">
+          <li class="collections-list__item" tabindex="0">
+            <a class="collections-list__link" href="#">
+              <div class="collections-list__background"></div>
+              <img class="collections-list__picture" src="./img/collection1.png" alt="Collection Kingsman style">
+              <h3 class="collections-list__title">
+                Kingsman style<div class="collections-list__title_small">More silk, more freedom</div>
+              </h3>
+            </a>
+          </li>
+          <li class="collections-list__item" tabindex="0">
+            <a class="collections-list__link" href="#">
+              <div class="collections-list__background"></div>
+              <img class="collections-list__picture" src="./img/collection2.png" alt="Collection Kingsman style">
+              <h3 class="collections-list__title">
+                Denim goddess<div class="collections-list__title_small">More denim, more freedom</div>
+              </h3>
+            </a>
+          </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="notified-box">
+      <div class="container content-column">
+        <div class="content-column_first"></div>
+        <div class="content-column_second">
+      <h2 class="notified-box__title">Subscribe our newsletter</h2>
+      <p class="notified-box__text text">Get notified about new collections of Gussi Store</p>
+      <form class="notified-form" action="mail.php" enctype="multipart/form-data" autocomplete="on" method="POST">
+        <input type="hidden" name="admin_email[]" value="viki12007@inbox.ru">
+        <input type="hidden" name="form_subject" value="Clients of the Gussi">
+        <input class="input notified-form__input" type="text" data-validate-field="name" name="name" placeholder="Enter your name">
+        <input class="input notified-form__input" type="email" data-validate-field="email" name="email" placeholder="Enter your e-mail">
+        <fildset class="notified-form__group">
+          <span class="notified-form__group-title text">Choose your gender:</span>
+          <div class="notified-form__group-wrapper">
+          <label class="custom-radio">
+            <input class="visually-hidden" type="radio" name="gender" value="male" checked>
+            <span class="notified-form__choose">Male</span>
+          </label>
+            <label class="custom-radio">
+            <input class="visually-hidden" type="radio" name="gender" value="female">
+            <span class="notified-form__choose">Female</span>
+          </label>
+          </div>
+        </fildset>
+        <label class="custom-checkbox" tabindex="0">
+          <input class="visually-hidden" type="checkbox" name="agree" value="yes" checked required>
+          <span class="notified-form__attention text">Look out for its standout party dresses, feminine details</span>
+        </label>
+        <button class="button notified-form__button" type="submit">Subscribe Gussi</button>
+      </form>
+      </div>
+      </div>
     </section>
   </main>
   
