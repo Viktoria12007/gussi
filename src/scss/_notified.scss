@@ -1,30 +1,34 @@
+@import "./mixins/breakpoint";
+
 .notified-box {
     margin-bottom: 29px;
     &__title {
         font-weight: 500;
         font-size: 32px;
-        line-height: 40px;
+        line-height: 37px;
+        @include _300 {
+            font-size: 24px;
+            line-height: 32px;
+        }
     }
     &__text {
-        margin-bottom: 24px;
+        margin-bottom: 28px;
+        @include _300 {
+            font-size: 18px;
+            line-height: 28px;
+        }
     }
 }
 .notified-form {
     display: flex;
     flex-direction: column;
     &__input {
-        max-width: 456px;
         font-weight: 500;
         font-size: 16px;
         line-height: 40px;
         padding-left: 16px;
         padding-right: 16px;
-        &[name="name"] {
-            margin-bottom: 16px;
-        }
-        &[name="email"] {
-            margin-bottom: 12px;
-        }
+        border: 1px solid transparent;
         &::placeholder {
             font-weight: 500;
             font-size: 16px;
@@ -32,11 +36,25 @@
             color: $bluesh-gray-color;
         }
     }
+    &__label {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+        position: relative;
+        max-width: 456px;
+        border: none;
+        &_name {
+                margin-bottom: 17px;
+            }
+        &_email {
+                margin-bottom: 13px;
+            }
+    }
     &__group {
         display: flex;
         align-items: center;
         flex-wrap: wrap;
-        margin-bottom: 40px;
+        margin-bottom: 38px;
         &-title {
             margin-right: 24px;
         }
@@ -91,7 +109,7 @@
 }
 .custom-checkbox {
     cursor: pointer;
-    margin-bottom: 16px;
+    margin-bottom: 18px;
 & .notified-form__attention {
     display: flex;
     align-items: center;
@@ -104,7 +122,7 @@
     min-width: 20px;
     height: 20px;
     position: absolute;
-    top: 5px;
+    top: 0;
     left: 0;
     border: 1px solid $light-gray-color;
     background-color: transparent;
@@ -114,7 +132,7 @@
     content: '';
     position: absolute;
     left: 8px;
-    top: 9.4px;
+    top: 5.4px;
     min-width: 5px;
     height: 8px;
     border: solid $light-gray-color;
@@ -136,4 +154,9 @@
     opacity: 1;
     border-color: $light-gray-color;
  }
+}
+.js-validate-error-label {
+    position: absolute;
+    top: -20px;
+    left: 20px;
 }

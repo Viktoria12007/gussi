@@ -1,18 +1,40 @@
+@import "./mixins/breakpoint";
+
 .swiper-container {
     width: 100%;
     position: relative;
 }
 .swiper-slide {
     display: flex;
+    @include _721 {
+        flex-direction: column;
+        flex-wrap: wrap;
+       }
+    @include _376 {
+        flex-direction: column;
+        flex-wrap: wrap;
+       }
+       @include _300 {
+        flex-direction: column;
+        flex-wrap: wrap;
+       }
 }
 .product-slider-control {
     position: absolute;
-    left: 62px;
-    top: 712px;
+    left: 48px;
+    top: 700px;
     z-index: 5;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @include _376 {
+        left: 12px;
+        top: 537px;
+       }
+    @include _300 {
+        left: 12px;
+        top: 537px;
+       }
 }
 .swiper-button-prev::after,
 .swiper-button-next::after {
@@ -39,13 +61,10 @@
     transition: fill .4s ease-in-out;
 }
 .product-button-prev {
-    margin-right: 21px;
+    margin-right: 10px;
 }
 .product-button-next {
-    margin-right: 90px;
-}
-.swiper-button-disabled {
-    opacity: 1!important;
+    margin-right: 77px;
 }
 .product-button-prev:hover,
 .product-button-next:hover {
@@ -78,6 +97,9 @@
 }
 .products-box {
     margin-bottom: 16px;
+    @include _376 {
+        margin-bottom: 40px;
+       }
 }
 .product-image {
     position: relative;
@@ -85,77 +107,196 @@
         position: absolute;
         left: 52px;
         top: 32px;
+        @include _376 {
+            top: 24px;
+            left: 16px;
+           }
+           @include _300 {
+            top: 24px;
+            left: 16px;
+           }
     }
     &__picture {
         width: 600px;
         height: 768px;
+        @include _721 {
+            width: 50%;
+           }
+        @include _376 {
+            width: 100%;
+            height: 600px;
+           }
+        @include _300 {
+            width: 100%;
+            height: 600px;
+           }
     }
     &__title {
         position: absolute;
         left: 52px;
         top: 568px;
         font-weight: 400;
-        font-size: 64px;
-        line-height: 64px;
+        font-size: 72px;
+        line-height: 72px;
         color: $white-color;
         margin: 0;
+        @include _721 {
+            font-size: 64px;
+            line-height: 64px;
+           }
+        @include _376 {
+            // top: 420px;
+            top: auto;
+            bottom: 85px;
+            left: 15px;
+            font-size: 64px;
+            line-height: 64px;
+           }
+        @include _300 {
+            // top: 430px;
+            // top: 68%;
+            top: auto;
+            bottom: 93px;
+            left: 15px;
+            font-size: 48px;
+            line-height: 48px;
+           }
         &_small {
             font-weight: 500;
             font-size: 28px;
-            line-height: 32px; 
+            line-height: 32px;
+            @include _376 {
+                font-size: 24px;
+                line-height: 32px;
+               }
+               @include _300 {
+                font-size: 16px;
+                line-height: 24px;
+               }
         }
     }
 }
 .logo {
     width: 95px;
     height: 53px;
+    @include _376 {
+        width: 65px;
+        height: 36px;
+       }
+    @include _300 {
+        width: 65px;
+        height: 36px;
+       }
 }
 .product-info {
     padding: 56px 52px 0px 92px;
+    @include _721 {
+        padding: 36px 42px 0px 36px;
+       }
+    @include _376 {
+        padding: 8px 16px 0px 16px;
+       }
+    @include _300 {
+        padding: 8px 16px 0px 16px;
+       }
     &__collection-title {
         margin-bottom: 24px;
+        @include _376 {
+            margin-bottom: 16px;
+           }
+        @include _300 {
+            margin-bottom: 16px;
+           }
     }
     &__product-title {
         font-weight: 500;
         font-size: 48px;
         line-height: 56px;
-        margin-bottom: 16px;
+        margin-bottom: 12px;
+        @include _300 {
+            font-size: 32px;
+            line-height: 32px;
+           }
     }
     &__details-title {
-        margin-bottom: 8px;
+        margin-bottom: 7px;
     }
     &__text {
         width: 65%;
-        margin-bottom: 8px;
+        margin-bottom: 10px;
+        @include _376 {
+            width: 92%;
+            margin-bottom: 8px;
+           }
+           @include _300 {
+            width: 95%;
+            font-size: 18px;
+            line-height: 28px;
+           }
     }
     &__details-text {
+        // width: 85%;
         margin-bottom: 8px;
     }
     &__composition {
         color: $bluesh-gray-color;
-        margin-bottom: 72px;
+        margin-bottom: 68px;
+        @include _376 {
+            margin-bottom: 40px;
+           }
     }
 }
 .product-form {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-end;
+   
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        padding: 17px 0 0 0;
+        margin-bottom: 24px;
+        border-top: 1px solid $light-gray-color;
+        border-bottom: 1px solid $light-gray-color;
+        @include _376 {
+            padding: 25px 0 0 0;
+           }
+    }
     &__group {
        margin-bottom: 32px;
-            margin-right: 53px;
+       margin-right: 48px;
+       @include _376 {
+        margin-bottom: 46px;
+       margin-right: 68px;
+       }
+        &-title {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 24px;
+            color: $bluesh-gray-color;
+        }
         &-title_first-row {
-            margin-bottom: 8px;
+            margin-bottom: 12px;
+            @include _376 {
+                margin-bottom: 18px;
+               }
         }
         &-title_quantity {
-            margin-bottom: 14px;
+            margin-bottom: 8px;
         }
         & .custom-radio {
             padding-right: 32px;
-            margin-right: 6px;
+            margin-right: 2px;
+            @include _376 {
+                padding-right: 30px;
+                margin-right: 18px;
+               }
+               @include _300 {
+                padding-right: 30px;
+                margin-right: 18px;
+               }
         }
     }
     &__guide-button {
-        padding: 2px 13px;
+        padding: 0px 12px;
         font-size: 16px;
         line-height: 24px;
         color: $sandy-color;
@@ -191,7 +332,6 @@
         }
     }
         &-number {
-            width: 12px;
             font-size: 24px;
             line-height: 24px;
             text-align: center;
@@ -246,6 +386,14 @@
         border-radius: 100%;
         opacity: 0;
         transition: all .4s ease-in-out;
+        @include _376 {
+            width: 48px;
+            height: 48px;
+           }
+           @include _300 {
+            width: 48px;
+            height: 48px;
+           }
     }
     &::after {
         content: "";
@@ -256,6 +404,16 @@
         width: 26px;
         height: 26px;
         border-radius: 100%;
+        @include _376 {
+            width: 40px;
+            height: 40px;
+            left: 5px;
+           }
+           @include _300 {
+            width: 40px;
+            height: 40px;
+            left: 5px;
+           }
     }
     &_xs::after {
         content: "XS";
@@ -266,6 +424,12 @@
         width: 26px;
         height: 26px;
         border-radius: 100%;
+        @include _376 {
+            left: 11px;
+           }
+           @include _300 {
+            left: 11px;
+           }
         }
     &_s::after {
         content: "S";
@@ -276,6 +440,12 @@
         width: 26px;
         height: 26px;
         border-radius: 100%;
+        @include _376 {
+            left: 11px;
+           }
+           @include _300 {
+            left: 11px;
+           }
         }
     &_m::after {
         content: "M";
@@ -286,6 +456,12 @@
         width: 26px;
         height: 26px;
         border-radius: 100%;
+        @include _376 {
+            left: 11px;
+           }
+           @include _300 {
+            left: 11px;
+           }
         }
     &_l::after {
         content: "L";
@@ -296,18 +472,21 @@
         width: 26px;
         height: 26px;
         border-radius: 100%;
+        @include _376 {
+            left: 11px;
+           }
+           @include _300 {
+            left: 11px;
+           }
         }
     &_violet::after {
         background-color: $violet-color;
-        transition: background-color .4s ease-in-out;
     }
     &_bluesh-gray::after {
         background-color: $bluesh-gray-color;
-        transition: background-color .4s ease-in-out;
     }
     &_middle-blue::after {
         background-color: #3d5876;
-        transition: background-color .4s ease-in-out;
     }
 }
     &:hover .product-form__choose::before {

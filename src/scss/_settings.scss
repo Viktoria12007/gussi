@@ -1,3 +1,5 @@
+@import "./mixins/breakpoint";
+
 * {
   padding: 0;
   margin: 0;
@@ -75,8 +77,26 @@ ul {
 .content-column_first {
   width: 600px; 
   flex: 0 0 auto;
+  @include _721 {
+    display: none;
+   }
+   @include _376 {
+    display: none;
+   }
+   @include _300 {
+    display: none;
+   }
 }
 .content-column_second {
   flex: 1 1 auto;
   padding: 0px 52px 0px 92px;
+  @include _721 {
+    padding: 36px 42px 0px 36px;
+   }
+   @include _376 {
+    padding: 8px 16px 0px 16px;
+   }
+   @include _300 {
+    padding: 8px 16px 0px 16px;
+   }
 }
